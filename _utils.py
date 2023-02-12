@@ -21,6 +21,14 @@ class VideoAttributeExtractor():
 
     @property 
     def video_attributes(self) -> dict:
+        """Returns the video attributes as a dictionary
+        
+        Returns:
+            dict: Video attributes
+            
+        Raises:
+            ValueError: If the video attributes are not found
+        """
         if not self._video_attributes: 
             self._video_attributes = probe(self.source_file)
         return self._video_attributes

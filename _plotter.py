@@ -10,6 +10,22 @@ from _utils import (
 
 
 def plot_results(results, graph_title, graph_filename, csv_file_name=None, dir_name=None):
+    """Plot the results of the video analysis
+    
+    Args:
+        results (tuple): Tuple containing the results of the video analysis
+        graph_title (str): Title of the graph
+        graph_filename (str): Filename of the graph
+        csv_file_name (str, optional): Filename of the csv file. Defaults to None.
+        dir_name (str, optional): Directory name. Defaults to None.
+        
+        Returns:
+            None
+            
+        Raises:
+            ValueError: If the results tuple is not of the correct length
+                
+    """
     seconds, bitrates, keyframes, encoder = results
 
     number_of_keyframes = len(keyframes)
